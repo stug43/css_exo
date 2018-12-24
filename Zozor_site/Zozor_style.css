@@ -1,0 +1,219 @@
+@font-face {
+	font-family:'ballpark';
+	src:url('polices/ballpark.eot') format('eot'),
+	url('polices/ballpark.svg') format('svg'),
+	url('polices/ballpark.ttf') format('ttf'),
+	url('polices/ballpark.woff') format('woff');
+}
+@font-face {
+        font-family:'dayrom';
+        src:url('polices/dayrom.eot') format('eot'),
+        url('polices/dayrom.svg') format('svg'),
+        url('polices/dayrom.ttf') format('ttf'),
+        url('polices/dayrom.woff') format('woff');
+}
+
+
+/* Corps de la page */
+#main_conteneur {
+	width : 900px ;
+	margin : auto ;
+} h1 {
+	font-family : ballpark ;
+	font-size : 2.7em ;
+	font-weight : normal ;
+} h2 {
+	font-family : dayrom ;
+	font-weight : normal ;
+} body {
+	background : url('images/fond_jaune.png') ;
+	height : 100% ;
+	font-family : 'Trebuchet MS', Arial, serif ;
+} html {
+	height : 100% ;
+}
+
+/* Header */
+#titre_header {
+	display : flex ;
+	flex-direction : column ;
+} #logo {
+	display : flex ;
+} #logo img {
+       height : 100% ;
+} header {
+	margin-bottom : 10px ;
+	display : flex ;
+	justify-content : space-between ;
+} nav ul {
+	list-style-type : none ;
+	display : flex ;
+	align-items : flex-end ;
+} nav li {
+	margin-right : 4px ;
+} nav a {
+	font-family : dayrom ;
+	font-size : 1.5em ;
+	text-decoration : none ;
+	color : #000 ;
+} nav a:hover {
+	color : #7c0d0d ;
+	border-bottom : 2px solid #7c0d0d ;
+} nav {
+	display : flex ;
+} .current {
+	text-decoration : underline ;
+} header h2 {
+	margin : 0 ;
+} header h1 {
+	margin-bottom : 0 ;
+}
+
+/* header sanfran */
+#header_sanfran {
+	box-shadow : 5px 5px 2px #222223 ;
+	margin-top : 10px ;
+	background : url('images/sanfrancisco.jpg') no-repeat ;
+	background-size : contain ;
+	height : 208px ;
+	display : flex ;
+	flex-direction : column ;
+	justify-content : flex-end ;
+	border-radius : 5px ;
+} .black_non_opaque {
+	display : flex ;
+	background-color : rgba(0,0,0,0.7) ;
+	color : #FFFFFF ;
+	justify-content : space-between ;
+	height : 20% ;	
+	padding : 5px ;
+	border-radius : 0 0 5px 5px ;
+} .black_non_opaque div {
+	display : flex ;
+	background : url('images/fond_degraderouge.png') repeat-x ;
+	border-radius : 3px ;
+	margin : auto 10px ;
+	align-items : center ;
+	height : 50% ;
+	padding : 5px ;
+} .black_non_opaque div a {
+	color : #fff ;
+	text-decoration : none ;
+	margin-right : 3px ;
+}
+
+/* Section */
+section {
+	display : flex ;
+	justify-content : space-between ;
+	margin-top : 10px ;
+}
+
+/* Article */
+#titre_article {
+	display : flex ;
+} #titre_article img {
+	height : 100% ;
+} article {
+	width : 62% ;
+}
+
+/* Aside */
+aside h2 {
+	font-size : 1.2em ;
+} aside {
+	box-shadow : 5px 5px 2px #222223 ;
+	padding : 5px ;
+	border-radius : 4px ;
+	height : 100% ;
+	background-color : #706b64 ;
+	color : #fff ;
+	width : 32% ;
+	display : flex ;
+	flex-direction : column ;
+} #aside_img, aside div, aside h2 {
+	align-self : center ;
+} #flechebulle {
+	position : relative ;
+	top : -85px ;
+	left : -82px ;
+}
+
+/* footer */
+footer {
+	align-items : center ;
+	flex-direction : column ;
+	display : flex ;
+	justify-content : space-between ;
+} footer ul a:hover {
+	text-decoration : underline ;
+} footer ul, footer ul a {
+	text-decoration : none ;
+	color : #7c0d0d ;
+	list-style-image : url('images/ico_liensexterne.png') ;
+} .real_footer {
+	width : 100% ;
+	display : flex ;
+	justify-content : space-around ;
+} .footer_list {
+	display : flex ;
+} .real_footer h2 {
+	text-align : center ;
+} #portfolio {
+	display : flex ;
+} #portfolio img {
+	margin : 3px ;
+	border : 1px solid black ;
+	display : block ;
+	max-height : 65px ;
+	max-width : 65px ;
+}
+
+/* separation style */
+.separation {
+	height : 5px ;
+	background : url('images/separateur.png') repeat-x ;
+} 
+
+
+@media all and (max-width : 900px)
+{
+        html {
+                width : auto ;
+        } body {
+                width : auto ;
+        } #main_conteneur {
+                width : auto ;
+		margin : 0 10px ;
+        } nav ul {
+                flex-direction : column ;
+        } nav a {
+                font-size : 1.3em ;
+        } #header_sanfran {
+                display : none ;
+        } section {
+                width : 100% ;
+                flex-direction : column ;
+        } aside {
+	       width : 100% ;
+	       margin-bottom : 5px ;
+	       text-align : center ;
+        } #flechebulle {
+                display : none ;
+        } #aside_img, aside:nth-child(2) {
+		display : inline-block ;
+		float : right ;
+	} nav a:hover {
+                border-bottom : 0 ;
+	} article {
+		width : 100% ;
+	} footer {
+		width : auto ;
+	} #portfolio {
+		flex-wrap : wrap ;
+		justify-content : center ;
+	} #portfolio img {
+		max-width : 45px ;
+		max-height : 45px ;
+	}
+}
