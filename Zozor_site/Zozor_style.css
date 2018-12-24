@@ -176,7 +176,7 @@ footer {
 } 
 
 
-@media all and ((max-width : 900px) or (max-device-width : 500px))
+@media all and ((max-width : 900px) or (max-device-width : 480px))
 {
         html {
                 width : auto ;
